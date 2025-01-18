@@ -23,5 +23,17 @@ for (i in 1:213) {
 df$missing_proportion<-mp
 df
 
+#Find the mean of the each rows
+avg<-vector()
+for (i in 1:213) {
+  avg[i] <- rowMeans(df[i,5:68], na.rm = TRUE)
+}
+
+df$Mean<-avg
+df
+
+df[,5:68][is.na(df[,5:68])] <- "na"
+df
+
 ```
 
