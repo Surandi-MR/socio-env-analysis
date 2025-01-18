@@ -47,6 +47,11 @@ for (i in 1:213) {
 }
 df
 
+#filter the rows that have missing count less than to 70%
+df1<-data.frame(df)
+df1<-df[df$missing_proportion<=70 & df$Mean !=0,]
+df1
+
 
 ```
 
