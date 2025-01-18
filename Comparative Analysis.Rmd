@@ -158,5 +158,18 @@ legend("bottomleft", legend = c("Sri Lanka", "India","Bangladesh"), col = c("blu
 
 #***INTERPRETATION-This diagram shows Control of Corruption in India, Sri Lanka and Bangladesh.The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the Control of Corruption Estimate Values.The Black line show India, Blue line shows Sri Lanka and Red line shows Bangladesh.Bangladesh has lowest Control of Corruption of the three countries. India has the highest Control of Corruption than Bangladesh.
 
+
+#create graph for EN.CLC.CDDY.XD
+plot(year,Sri_Lanka$EN.CLC.CDDY.XD,ylim=c(3000,6000),type= "l",col="blue",xlab="Year",ylab="number of degrees a day",main="Cooling Degree Days")
+lines(year,India$EN.CLC.CDDY.XD,col="black")
+lines(year,Bangladesh$EN.CLC.CDDY.XD,col="red")
+legend("bottomright", legend = c("Sri Lanka", "India","Bangladesh"), col = c("blue","black","red"), lty = 1, bty = "o")
+
+#***INTERPRETATION-This diagram shows Cooling Degree Daysin India, Sri Lanka and Bangladesh. The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the Number of degrees a day.The Black line show India, Blue line shows Sri Lanka and Red line shows Bangladesh.Sri Lanka has Highest number of degrees a day of the three countries.India And Bangladesh likes varies equally
+
+
+
+
+
 ```
 
