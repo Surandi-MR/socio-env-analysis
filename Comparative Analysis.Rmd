@@ -148,5 +148,15 @@ labs (title = "CO2 emissions", x="Year", y="CO2 Emissions(metric tons per capita
 scale_color_manual(name="Country", labels = c("Bangladesh", "India", "Sri Lanka"), values = c("blue", "black", "red"))+
 theme_minimal()
 
+#***INTERPRETATION-This diagram shows CO2 emissions per capita in India, Sri Lanka and Bangladesh. The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the metric tons of CO2 emissions per capita.The Black line show India, Blue line shows Bangladesh and red line shows Sri Lanka.Bangladesh has the lowest percentage of CO2 emissions of the three countries. India has the highest percentage of CO2 emissions.Sri Lanka has a higher percentage of CO2 emissions than Bangladesh.
+
+#create graph for CC.EST
+plot(year,Sri_Lanka$CC.EST,ylim=c(-2,0),type= "l",col="blue",xlab="Year",ylab="Control of Corruption: Estimate values",main="Control of Corruption")
+lines(year,India$CC.EST,col="black")
+lines(year,Bangladesh$CC.EST,col="red")
+legend("bottomleft", legend = c("Sri Lanka", "India","Bangladesh"), col = c("blue","black","red"), lty = 1, bty = "o")
+
+#***INTERPRETATION-This diagram shows Control of Corruption in India, Sri Lanka and Bangladesh.The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the Control of Corruption Estimate Values.The Black line show India, Blue line shows Sri Lanka and Red line shows Bangladesh.Bangladesh has lowest Control of Corruption of the three countries. India has the highest Control of Corruption than Bangladesh.
+
 ```
 
