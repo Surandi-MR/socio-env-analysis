@@ -6,6 +6,12 @@ output: html_document
 ---
 
 ```{r}
+library(dplyr)
+options(scipen = 999)
+
+df<-read.csv("C:\\Users\\RISINA\\Desktop\\Concrete project\\socio-env-analysis\\Data_set.csv")
+df
+
 
 ```
 
