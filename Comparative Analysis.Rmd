@@ -12,6 +12,16 @@ options(scipen = 999)
 df<-read.csv("C:\\Users\\RISINA\\Desktop\\Concrete project\\socio-env-analysis\\Data_set.csv")
 df
 
+#Get the missing count and its proportion to the data set
+missing_count<-vector()
+mp<-vector()
+for (i in 1:213) {
+  missing_count[i] <- sum(is.na(df[i,5:68]))#counting missing values in each column
+  mp[i]<-(missing_count[i]/64)*100
+}
+
+df$missing_proportion<-mp
+df
 
 ```
 
