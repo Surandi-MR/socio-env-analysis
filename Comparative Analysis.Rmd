@@ -130,5 +130,23 @@ summary(Sri_Lanka$CC.EST)
 summary(Bangladesh$CC.EST)
 summary(India$CC.EST)
 
+#create vectors for EN.ATM.CO2E.PC
+SL<-c(Sri_Lanka$EN.ATM.CO2E.PC)
+IN<-c(India$EN.ATM.CO2E.PC)
+BA<-c(Bangladesh$EN.ATM.CO2E.PC)
+
+data_1<-data.frame(SL,IN,BA,year)
+data_1
+
+library(ggplot2)
+
+ggplot(data = data_1, mapping = aes (x=year))+
+geom_line (mapping = aes(y=SL, color = "Sri Lanka"))+
+geom_line (mapping =aes(y=IN, color = "India"))+
+geom_line (mapping =aes(y=BA, color = "Banglasdesh"))+
+labs (title = "CO2 emissions", x="Year", y="CO2 Emissions(metric tons per capita)")+
+scale_color_manual(name="Country", labels = c("Bangladesh", "India", "Sri Lanka"), values = c("blue", "black", "red"))+
+theme_minimal()
+
 ```
 
