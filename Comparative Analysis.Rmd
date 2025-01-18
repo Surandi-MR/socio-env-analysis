@@ -52,6 +52,68 @@ df1<-data.frame(df)
 df1<-df[df$missing_proportion<=70 & df$Mean !=0,]
 df1
 
+#Create 3 data frame to each country
+
+#Create data frame to sri lanka
+dfSL<-data.frame(df1)
+dfSL<-df1[df1$Country.Code=="LKA",]
+dfSL
+#Transpose
+Sri_Lanka<-data.frame(t(dfSL[1:71,5:68]))
+Sri_Lanka
+Sri_Lanka<-Sri_Lanka[1:64,1:51]
+Sri_Lanka
+
+#Create data frame to Bangladesh
+dfBA<-data.frame(df1)
+dfBA<-df1[df1$Country.Code=="BGD",]
+dfBA
+Bangladesh<-data.frame(t(dfBA[1:71,5:68]))
+Bangladesh
+Bangladesh<-Bangladesh[1:64,1:51]
+Bangladesh
+
+#Create data frame to India
+dfIN<-data.frame(df1)
+dfIN<-df1[df1$Country.Code=="IND",]
+dfIN
+India<-data.frame(t(dfIN[1:71,5:68]))
+India
+India<-India[1:64,1:53]
+India
+
+#insert column names for Sri_Lanka data frame
+colNumSL<- vector()
+colNumSL<-dfSL$Indicator.Code
+colnames(Sri_Lanka)<-colNumSL
+Sri_Lanka
+
+#insert column names for Bangladesh data frame
+colNumBA<- vector()
+colNumBA<-dfBA$Indicator.Code
+colnames(Bangladesh)<-colNumBA
+Bangladesh
+
+#insert column names for India data frame
+colNumIN<- vector()
+colNumIN<-dfIN$Indicator.Code
+colnames(India)<-colNumIN
+India
+
+#insert row names for 3 country
+year<-c(1960:2023)
+Sri_Lanka$Year<-year
+Bangladesh$Year<- year
+India$Year<-year
+Sri_Lanka
+Bangladesh
+India
+
+#convert all values for numeric
+Sri_Lanka[]<-lapply(Sri_Lanka,as.numeric)
+Bangladesh[]<-lapply(Bangladesh,as.numeric)
+India[]<-lapply(India,as.numeric)
+
 
 ```
 
