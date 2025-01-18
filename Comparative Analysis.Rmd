@@ -35,5 +35,18 @@ df
 df[,5:68][is.na(df[,5:68])] <- "na"
 df
 
+
+#Replace missing values with 'avg'(mean we have found)
+
+for (i in 1:213) {
+  for (j in 5:68) {
+    if(df[i,j]=="na"){
+      df[i,j]<-avg[i]
+    }
+  }
+}
+df
+
+
 ```
 
