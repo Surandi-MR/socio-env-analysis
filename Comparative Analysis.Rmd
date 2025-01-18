@@ -114,6 +114,21 @@ Sri_Lanka[]<-lapply(Sri_Lanka,as.numeric)
 Bangladesh[]<-lapply(Bangladesh,as.numeric)
 India[]<-lapply(India,as.numeric)
 
+#summary for ER.H2O.FWTL.ZS
+summary(Sri_Lanka$ER.H2O.FWTL.ZS)
+summary(India$ER.H2O.FWTL.ZS)
+
+#summary for EN.ATM.CO2E.PC
+summary(Sri_Lanka$EN.ATM.CO2E.PC)
+summary(Bangladesh$EN.ATM.CO2E.PC)
+summary(India$EN.ATM.CO2E.PC)
+
+#The average CO2 emission of Srilanka is 0.6352 metric ton per capita,The average CO2 emission of Bangladesh is 0.28097 metric ton per capita,The average CO2 emission of India is 1.1335 metric ton per capita
+
+#summary for CC.EST 
+summary(Sri_Lanka$CC.EST)
+summary(Bangladesh$CC.EST)
+summary(India$CC.EST)
 
 ```
 
