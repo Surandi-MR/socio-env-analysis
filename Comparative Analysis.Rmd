@@ -167,7 +167,12 @@ legend("bottomright", legend = c("Sri Lanka", "India","Bangladesh"), col = c("bl
 
 #***INTERPRETATION-This diagram shows Cooling Degree Daysin India, Sri Lanka and Bangladesh. The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the Number of degrees a day.The Black line show India, Blue line shows Sri Lanka and Red line shows Bangladesh.Sri Lanka has Highest number of degrees a day of the three countries.India And Bangladesh likes varies equally
 
+#create graph for ER.H2O.FWTL.ZS
+plot(year,Sri_Lanka$ER.H2O.FWTL.ZS,ylim=c(15,50),type= "l",col="blue",xlab="Year",ylab=" total persentage of internal resources",main="Annual freshwater withdrawals")
+lines(year,India$ER.H2O.FWTL.ZS,col="black")
+legend("bottomright", legend = c("Sri Lanka", "India"), col = c("blue","black"), lty = 1, bty = "o")
 
+#***INTERPRETATION-This diagram shows Annual freshwater withdrawals India and Sri Lanka. The x-axis shows the year, ranging from 1960 to 2020. The y-axis shows the total persentage of internal resources.The Black line shows India and Blue line shows Sri Lanka.India has Highest total persentage of internal resources.Sri Lanka has lowest total persentage of internal resources.
 
 
 
